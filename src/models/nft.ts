@@ -10,6 +10,11 @@ export interface TransferState {
   uuid?: string
 }
 
+export interface SignMessageState {
+  message?: string
+  signature?: string
+}
+
 export interface ListMeta {
   current_page: number
   total_count: number

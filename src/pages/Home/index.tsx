@@ -5,7 +5,6 @@ import { useAccount, useChainType } from '../../hooks/useAccount'
 import { Config, loginWithRedirect } from 'flashsigner-sdk'
 import { RoutePath } from '../../routes/path'
 import { ArrowBackIcon, ArrowForwardIcon, StarIcon } from '@chakra-ui/icons'
-import { useConfirmDialog } from '../../hooks/useConfirmDialog'
 import { useNavigate } from 'react-router-dom'
 
 const mainnetURL = 'https://flashsigner.com'
@@ -17,7 +16,7 @@ export const Home: React.FC = () => {
   const [network, setNetwork] = useState(chainType === 'mainnet' ? mainnetURL : testnetURL)
   const login = () => {
     loginWithRedirect(`${location.origin}${RoutePath.Flashsigner}`, {
-      name: 'Flashsigner demo',
+      name: 'Flashsigner Demo',
       logo: `${location.origin}/favicon.svg`,
     })
     return
@@ -43,6 +42,22 @@ export const Home: React.FC = () => {
     navi(RoutePath.NFT)
   }
 
+  const signMessage = () => {
+    if (!isLoggedIn) {
+      alert('Please login first')
+      return
+    }
+    navi(RoutePath.SignMessage)
+  }
+
+  const signTx = () => {
+    if (!isLoggedIn) {
+      alert('Please login first')
+      return
+    }
+    navi(RoutePath.SignTransaction)
+  }
+
   return (
     <MainContainer>
       <Stack spacing="2em" direction="column">
@@ -65,6 +80,12 @@ export const Home: React.FC = () => {
         </Button>
         <Button leftIcon={<StarIcon />} isFullWidth colorScheme="cyan" onClick={transfer}>
           Transfer NFT
+        </Button>
+        <Button isFullWidth colorScheme="pink" onClick={signMessage}>
+          Sign raw message
+        </Button>
+        <Button isFullWidth colorScheme="pink" onClick={signTx}>
+          Sign raw transaction
         </Button>
       </Stack>
     </MainContainer>

@@ -28,6 +28,23 @@ export const Flashsigner: React.FC = () => {
           replace: true,
         })
       },
+      onSignTransaction(res) {
+        navigate(RoutePath.SignTransaction, {
+          replace: true,
+          state: {
+            tx: res.transaction,
+          }
+        })
+      },
+      onSignRawMessage(res) {
+        navigate(RoutePath.SignMessage, {
+          replace: true,
+          state: {
+            message: res.message,
+            signature: res.signature
+          }
+        })
+      },
       onTransferMnft(res) {
         const { uuid, toAddress } = res.extra!
         navigate(`${RoutePath.Transfer}/${uuid}`, {
@@ -37,6 +54,10 @@ export const Flashsigner: React.FC = () => {
           },
           replace: true,
         })
+      },
+      onError(err) {
+        alert(err)
+        navigate(RoutePath.Home)
       }
     })
   }, [])
