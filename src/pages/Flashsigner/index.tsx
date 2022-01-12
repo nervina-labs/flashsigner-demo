@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getResultFromURL } from 'flashsigner-sdk'
+import { getResultFromURL } from '@nervina-labs/flashsigner'
 import { useAccount } from '../../hooks/useAccount'
 import { useNavigate } from 'react-router-dom'
 import { RoutePath } from '../../routes/path'

@@ -1,5 +1,5 @@
 import { VStack, Textarea, Button } from '@chakra-ui/react'
-import { signMessageWithRedirect } from 'flashsigner-sdk'
+import { signMessageWithRedirect } from '@nervina-labs/flashsigner'
 import React, { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { MainContainer } from '../../components/Container'

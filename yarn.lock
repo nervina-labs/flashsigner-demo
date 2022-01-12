@@ -925,6 +925,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@nervina-labs/flashsigner@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@nervina-labs/flashsigner/-/flashsigner-0.1.1.tgz#3823a5c48baf739e733038f9eaf313b2d2eb126e"
+  integrity sha512-CC9/bVZ/lX2Wkf/4dQjcx3xPmAn0PfL1SbTwT/SbE6hmyQw9uqJi8GUDb57w32WeRZJKjZn8wcZ//vfR7XYMQA==
+
 "@nervosnetwork/ckb-sdk-rpc@^0.101.0":
   version "0.101.0"
   resolved "https://registry.yarnpkg.com/@nervosnetwork/ckb-sdk-rpc/-/ckb-sdk-rpc-0.101.0.tgz#aa8d6b25b66306e6d1dc21cf7a9c01ddc1f8aa2a"
@@ -1411,11 +1416,6 @@ find-root@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/find-root/-/find-root-1.1.0.tgz#abcfc8ba76f708c42a97b3d685b7e9450bfb9ce4"
   integrity sha512-NKfW6bec6GfKc0SGx1e07QZY9PE99u0Bft/0rzSD5k3sO/vwkVUpDUKVm5Gpp5Ue3YfShPFTX2070tDs5kB9Ng==
-
-flashsigner-sdk@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/flashsigner-sdk/-/flashsigner-sdk-0.1.1.tgz#a651f112f975eaec5e88da63f9936deb57b886ce"
-  integrity sha512-VZK6BpzHG1CqDloianG1WUIKy/lVf0WxwiYq2IPCVj6CEUyHXK69XOueFb5Y6zmSCP4dJuUbU5Tcc5RNogKxcg==
 
 focus-lock@^0.9.1:
   version "0.9.2"

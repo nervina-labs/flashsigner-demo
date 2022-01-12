@@ -1,6 +1,6 @@
 import { VStack, Textarea, Button } from '@chakra-ui/react'
 import axios from 'axios'
-import { transferMnftWithRedirect } from 'flashsigner-sdk'
+import { transferMnftWithRedirect } from '@nervina-labs/flashsigner'
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { MainContainer } from '../../components/Container'

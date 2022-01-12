@@ -1,4 +1,4 @@
-import { Config } from 'flashsigner-sdk'
+import { Config } from '@nervina-labs/flashsigner'
 import React, { Suspense, useLayoutEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useChainType } from '../hooks/useAccount'

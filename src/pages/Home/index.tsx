@@ -2,7 +2,7 @@ import { Button, Select, Stack, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { MainContainer } from '../../components/Container'
 import { useAccount, useChainType } from '../../hooks/useAccount'
-import { Config, loginWithRedirect } from 'flashsigner-sdk'
+import { Config, loginWithRedirect } from '@nervina-labs/flashsigner'
 import { RoutePath } from '../../routes/path'
 import { ArrowBackIcon, ArrowForwardIcon, StarIcon } from '@chakra-ui/icons'
 import { useNavigate } from 'react-router-dom'
@@ -78,13 +78,13 @@ export const Home: React.FC = () => {
         <Button leftIcon={<ArrowBackIcon />} isFullWidth onClick={() => logout()}>
           Logout
         </Button>
-        <Button leftIcon={<StarIcon />} isFullWidth colorScheme="cyan" onClick={transfer}>
+        <Button leftIcon={<StarIcon />} isFullWidth colorScheme="yellow" onClick={transfer}>
           Transfer NFT
         </Button>
-        <Button isFullWidth colorScheme="pink" onClick={signMessage}>
+        <Button isFullWidth colorScheme="yellow" onClick={signMessage}>
           Sign raw message
         </Button>
-        <Button isFullWidth colorScheme="pink" onClick={signTx}>
+        <Button isFullWidth colorScheme="yellow" onClick={signTx}>
           Sign raw transaction
         </Button>
       </Stack>
