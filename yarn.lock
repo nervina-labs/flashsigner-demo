@@ -925,10 +925,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@nervina-labs/flashsigner@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@nervina-labs/flashsigner/-/flashsigner-0.1.1.tgz#3823a5c48baf739e733038f9eaf313b2d2eb126e"
-  integrity sha512-CC9/bVZ/lX2Wkf/4dQjcx3xPmAn0PfL1SbTwT/SbE6hmyQw9uqJi8GUDb57w32WeRZJKjZn8wcZ//vfR7XYMQA==
+"@nervina-labs/flashsigner@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@nervina-labs/flashsigner/-/flashsigner-0.1.2.tgz#f555d4f88fc440004cd095be2af7b8d724ccdc96"
+  integrity sha512-dpg2CBymb1i7aird80vZXbC7UmAQeiqU8AIpPnNHdqFy2PzVMNkMoZzKxILe5PWnFRXs6Nw6jHPe2yxM4thaDw==
 
 "@nervosnetwork/ckb-sdk-rpc@^0.101.0":
   version "0.101.0"
