@@ -1,10 +1,10 @@
-import { Button, Select, Stack, Text } from '@chakra-ui/react'
+import { Button, Center, Link, Select, Stack, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { MainContainer } from '../../components/Container'
 import { useAccount, useChainType } from '../../hooks/useAccount'
 import { Config, loginWithRedirect } from '@nervina-labs/flashsigner'
 import { RoutePath } from '../../routes/path'
-import { ArrowBackIcon, ArrowForwardIcon, StarIcon } from '@chakra-ui/icons'
+import { ArrowBackIcon, ArrowForwardIcon, ExternalLinkIcon, StarIcon } from '@chakra-ui/icons'
 import { useNavigate } from 'react-router-dom'
 
 const mainnetURL = 'https://flashsigner.com'
@@ -87,6 +87,12 @@ export const Home: React.FC = () => {
         <Button isFullWidth colorScheme="yellow" onClick={signTx}>
           Sign raw transaction
         </Button>
+        <Link href='https://github.com/nervina-labs/flashsigner-demo' isExternal>
+          <Center>
+            <Text>GitHub</Text>
+            <ExternalLinkIcon ml='4px' />
+          </Center>
+        </Link>
       </Stack>
     </MainContainer>
   )
