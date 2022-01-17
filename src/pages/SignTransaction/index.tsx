@@ -8,7 +8,7 @@ import { RoutePath } from '../../routes/path'
 
 export const SignTransaction: React.FC = () => {
   const location =  useLocation()
-  const state = location.state as SignMessageState ?? {}
+  const state = location.state as any ?? {}
   const [value, setVal] = useState(state?.message ?? '')
 
   const sign = () => {
@@ -35,7 +35,7 @@ export const SignTransaction: React.FC = () => {
         <Textarea
           placeholder="Signed Transaction"
           isReadOnly
-          value={state?.signature ?? ''}
+          value={state?.tx ? JSON.stringify(state?.tx, null, 4) : ''}
           size="lg"
           height="30vh"
         />
