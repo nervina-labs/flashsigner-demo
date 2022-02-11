@@ -2,6 +2,7 @@ import { Config } from '@nervina-labs/flashsigner'
 import React, { Suspense, useLayoutEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useChainType } from '../hooks/useAccount'
+import { CKB } from '../pages/CKB'
 import { Flashsigner } from '../pages/Flashsigner'
 import { Home } from '../pages/Home'
 import { NFT } from '../pages/NFT'
@@ -31,6 +32,7 @@ export const Routers: React.FC = () => {
           <Route path={RoutePath.SignTransaction} element={<SignTransaction />} />
           <Route path={`${RoutePath.Transfer}/:uuid`} element={<Transfer />} />
           <Route path={RoutePath.Flashsigner} element={<Flashsigner />} />
+          <Route path={RoutePath.CKB} element={<CKB />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

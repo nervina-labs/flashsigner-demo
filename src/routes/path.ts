@@ -5,4 +5,5 @@ export enum RoutePath {
   SignMessage = '/sign-message',
   SignTransaction = '/sign-transaction',
   Flashsigner = '/flashsigner',
+  CKB = '/CKB'
 }
