@@ -107,7 +107,7 @@ export const CKB: React.FC = () => {
   const [toAddress, setToAddress] = useState(state?.toAddress ?? '')
   const [amount, setVal] = useState(state?.amount ?? '')
   const [signTx, setSignTx] = useState(state?.tx ?? '')
-  const [balance, setBalance] = useState(0)
+  const [balance, setBalance] = useState(BigInt(0))
   const unspentCellsRef: CellRef = useRef()
   const ckbRef: CkbRef = useRef()
   const lockRef: MyLock = useRef()
@@ -178,8 +178,8 @@ export const CKB: React.FC = () => {
     await ckb.loadDeps()
     const lock = lockRef.current = ckb.utils.addressToScript(account.address)
     unspentCellsRef.current = await ckb.loadCells({ indexer, CellCollector, lock })
-    let countBalance = 0
-    unspentCellsRef.current.forEach(item => countBalance += parseInt(item.capacity, 16))
+    let countBalance = BigInt(0)
+    unspentCellsRef.current.forEach(item => countBalance += BigInt(item.capacity))
     setBalance(countBalance)
   }
 
@@ -226,7 +226,7 @@ export const CKB: React.FC = () => {
     <MainContainer>
       <VStack spacing="5vh">
         {!!balance && <Box bg='tomato' w='100%' p={4} color='white'>
-          可用余额：{(balance / 100000000).toFixed(9)} CKB
+          Available Balance: {(Number(balance) / 100000000).toFixed(8)} CKB
         </Box>}
         <Textarea
           placeholder="Transfer address"
