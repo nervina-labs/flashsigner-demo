@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { RoutePath } from '../../routes/path'
 
 export interface RouteState {
+  amount: number
   uuid: string
   toAddress: string
 }
@@ -29,6 +30,17 @@ export const Flashsigner: React.FC = () => {
         })
       },
       onSignTransaction(res) {
+        if(res.extra) {
+          navigate(RoutePath.CKB, {
+            replace: true,
+            state: {
+              tx: res.transaction,
+              toAddress: res?.extra?.toAddress,
+              amount: res?.extra?.amount
+            }
+          })
+          return
+        }
         navigate(RoutePath.SignTransaction, {
           replace: true,
           state: {

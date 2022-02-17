@@ -18,6 +18,7 @@
     "@nervosnetwork/ckb-sdk-utils": "^0.101.0",
     "@types/qrcode.react": "^1.0.2",
     "axios": "^0.24.0",
+    "camelcase-keys": "^7.0.2",
     "framer-motion": "^5.5.6",
     "jotai": "^1.4.7",
     "qrcode.react": "^1.0.1",
