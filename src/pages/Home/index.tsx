@@ -58,6 +58,14 @@ export const Home: React.FC = () => {
     navi(RoutePath.SignTransaction)
   }
 
+  const transferCKB = () => {
+    if (!isLoggedIn) {
+      alert('Please login first')
+      return
+    }
+    navi(RoutePath.CKB)
+  }
+
   return (
     <MainContainer>
       <Stack spacing="2em" direction="column">
@@ -80,6 +88,9 @@ export const Home: React.FC = () => {
         </Button>
         <Button leftIcon={<StarIcon />} isFullWidth colorScheme="yellow" onClick={transfer}>
           Transfer NFT
+        </Button>
+        <Button leftIcon={<StarIcon />} isFullWidth colorScheme="yellow" onClick={transferCKB}>
+          Transfer CKB
         </Button>
         <Button isFullWidth colorScheme="yellow" onClick={signMessage}>
           Sign raw message
