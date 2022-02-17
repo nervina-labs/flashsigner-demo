@@ -8,7 +8,7 @@ import { ArrowBackIcon, ArrowForwardIcon, ExternalLinkIcon, StarIcon } from '@ch
 import { useNavigate } from 'react-router-dom'
 
 const mainnetURL = 'https://flashsigner.com'
-const testnetURL = 'https://staging.flashsigner.work'
+const testnetURL = 'https://flashsigner-git-fix-cota-error-message-nervina.vercel.app'
 
 export const Home: React.FC = () => {
   const { isLoggedIn, logout, account } = useAccount()

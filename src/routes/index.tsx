@@ -19,6 +19,7 @@ export const Routers: React.FC = () => {
       Config.setChainType('mainnet')
     } else {
       Config.setChainType('testnet')
+      Config.setFlashsignerURL('https://flashsigner-git-fix-cota-error-message-nervina.vercel.app')
     }
   }, [chainType])
   return (
