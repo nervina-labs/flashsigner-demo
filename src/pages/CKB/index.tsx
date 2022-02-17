@@ -146,7 +146,7 @@ export const CKB: React.FC = () => {
       return
     }
 
-    const fee = 100_000n
+    const fee = BigInt(100_000)
     const { inputs, leftCapacity } = utils.getInputs(unspentCells, BigInt(amount), fee)
     const outputs = utils.getOutputs({
       mylock: ckb.utils.addressToScript(fromAddress),
